@@ -1,12 +1,11 @@
-import '../styles/index.css';
+import "../styles/index.css";
+import TodoApp from "./Todo";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        Redux-Toolkit Tutorial
-      </header>
-      {/* <TodoApp /> */}
+      <header className="App-header">Redux-Toolkit Tutorial</header>
+      <TodoApp />
     </div>
   );
 }
