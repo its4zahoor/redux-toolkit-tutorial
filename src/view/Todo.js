@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { addTodo, deleteTodo, doneTodo, undoneTodo } from "../store/todo";
 
 const TodoUI = (props) => {
-  const { idsMap, ids, count } = useSelector((state) => state.todo);
+  const { idsMap, ids, lastId } = useSelector((state) => state.todo);
   const dispatch = useDispatch();
   const [text, setText] = useState("");
 
@@ -14,7 +14,7 @@ const TodoUI = (props) => {
   const handleClick = () => {
     dispatch(
       addTodo({
-        id: count + 1,
+        id: lastId + 1,
         task: text,
         isDone: false,
       })

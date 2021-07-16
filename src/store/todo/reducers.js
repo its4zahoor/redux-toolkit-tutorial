@@ -2,7 +2,7 @@ import * as Types from "./types";
 
 const initialState = {
   idsMap: {},
-  count: 0,
+  lastId: 0,
   ids: [],
 };
 
@@ -16,7 +16,7 @@ const todoReducer = (state = initialState, action) => {
           ...state.idsMap,
           [payload.id]: payload,
         },
-        count: state.count + 1,
+        lastId: state.lastId + 1,
         ids: [...state.ids, payload.id],
       };
 
